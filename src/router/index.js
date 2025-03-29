@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import WishlistView from '@/views/WishlistView.vue'
 import VendorLogView from '@/views/Vendor/VendorLogView.vue'
+import VendorSignInView from '@/views/Vendor/VendorSignInView.vue'
+import AdminLogView from '@/views/Admin/AdminLogView.vue'
+import AdminSignInView from '@/views/Admin/AdminSignInView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +23,21 @@ const router = createRouter({
       path: '/vendorlog',
       name: 'vendorlog',
       component: VendorLogView,
+    },
+    {
+      path: '/vendorSignIn',
+      name: 'vendorSignIn',
+      component: VendorSignInView,
+    },
+    {
+      path: '/AdminLog',
+      name: 'AdminLog',
+      component: AdminLogView,
+    },
+    {
+      path: '/AdminSignIn',
+      name: 'AdminSignIn',
+      component: AdminSignInView
     }
   ],
 })
