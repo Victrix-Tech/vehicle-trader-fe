@@ -1,5 +1,15 @@
 <template>
-  <div class="wishlist">
-    <h1 class="text-black">Wishlist</h1>
-  </div>
+  
+  <HeaderSmall/>
+  
+  <WishlistView />
+  <Footer />
 </template>
+
+<script setup>
+import Footer from "../components/Footer.vue"
+import WishlistView from "../components/Wishlist.vue";
+import HeaderSmall from "../components/HeaderSmall.vue";
+
+
+</script>
