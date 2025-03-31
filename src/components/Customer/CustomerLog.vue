@@ -160,7 +160,7 @@
     </div>
   </section>
 </template>
-<script setup>
+  <script setup>
 import { ref } from "vue";
 
 const form = ref({
@@ -172,3 +172,4 @@ const form = ref({
   agree: false
 });
 </script>
+  
