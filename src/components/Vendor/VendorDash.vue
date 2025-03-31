@@ -66,6 +66,7 @@
       </header>
 
       <DashboardSecNav />
+      <VehicleGrid />
 
       <!-- Vehicle Cards -->
       <div class="grid gap-4">
@@ -128,5 +129,7 @@
 <script setup >
 import DashboardSide from "../../components/Vendor/DashboardSide.vue";
 import DashboardSecNav from "../../components/Vendor/DashboardSecNav.vue";
+import VehicleGrid from "../../components/Vendor/VehicleGrid.vue";
+
 </script>
   
