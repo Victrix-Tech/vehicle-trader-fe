@@ -30,47 +30,52 @@
         <span class="text-[#6C6C6C] text-sm">Enter details to proceed further</span>
       </div>
 
-       <!-- form -->
-       <form class="w-full max-w-sm space-y-8">
+      <form class="w-full max-w-sm space-y-8">
         <!-- Email -->
         <div class="relative">
           <input
             type="email"
             id="email"
             v-model="email"
-            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            placeholder=" " />
+            placeholder=" "
+            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+          />
+
           <label
             for="email"
-            class="absolute left-4 top-4 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-500"
+            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+            :class="{ 'top-1 text-xs text-secondary': email }"
           >Email</label>
 
           <!-- Email Icon -->
           <img
-            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
             src="../../assets/vendor/email.png"
-            alt="Email icon"/>
-          </div>
+            alt="Email icon"
+          />
+        </div>
 
-       <!--Password -->
-       <div class="relative">
+
+        <div class="relative">
           <input
             type="password"
             id="password"
             v-model="password"
-            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
             placeholder=" "
+            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
           />
+
           <label
-            for="email"
-            class="absolute left-4 top-4 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-500"
+            for="password"
+            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+            :class="{ 'top-1 text-xs text-secondary': firstName }"
           >Password</label>
 
-          <!-- Cancel Icon -->
+          <!-- Email Icon -->
           <img
-            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
             src="../../assets/vendor/cancel.png"
-            alt="Cancel"
+            alt="Cancel icon"
           />
         </div>
 
