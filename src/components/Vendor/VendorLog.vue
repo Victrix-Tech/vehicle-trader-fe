@@ -60,64 +60,74 @@
 
         <!-- First & Last Name -->
         <div class="flex gap-6">
-          <div class="relative w-1/2">
-            <input
-              type="firstName"
-              id="firstName"
-              v-model="firstName"
-              class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder=" "
-            />
-            <label
-              for="firstName"
-              class="absolute left-4 top-4 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-500"
-            >First Name</label>
-            <!-- First -->
-            <img
-              class="absolute right-3 top-1/2 transform -translate-y-1/2 w-[16px] h-5[16px] text-gray-400"
-              src="../../assets/vendor/profile.png"
-              alt="First Name"
-            />
-          </div>
-          <div class="relative w-1/2">
-            <input
-              type="lastName"
-              id="lastName"
-              v-model="lastName"
-              class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder=" "
-            />
-            <label
-              for="lastName"
-              class="absolute left-4 top-4 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-500"
-            >LastName</label>
-            <!-- Email Icon -->
-            <img
-              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-[16px] h-5[16px]"
-              src="../../assets/vendor/profile.png"
-              alt="Email icon"
-            />
-          </div>
+          <div class="relative">
+          <input
+            type="firstName"
+            id="firstName"
+            v-model="firstName"
+            placeholder=" "
+            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+          />
+
+          <label
+            for="firstName"
+            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+            :class="{ 'top-1 text-xs text-secondary': firstName }"
+          >First Name</label>
+
+          <!-- Email Icon -->
+          <img
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+            src="../../assets/vendor/profile.png"
+            alt="firstName icon"
+          />
+        </div>
+
+        <div class="relative w-1/2">
+          <input
+            type="lastName"
+            id="lastName"
+            v-model="lastName"
+            placeholder=" "
+            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+          />
+
+          <label
+            for="lastName"
+            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+            :class="{ 'top-1 text-xs text-secondary': lastName }"
+          >Last Name</label>
+
+          <!-- Email Icon -->
+          <img
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+            src="../../assets/vendor/profile.png"
+            alt="lastname icon"
+          />
+        </div>
         </div>
 
         <!-- Password -->
         <div class="relative">
           <input
-            type="passowrd"
-            id="passowrd"
-            v-model="passowrd"
-            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            type="password"
+            id="password"
+            v-model="password"
             placeholder=" "
+            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
           />
+
           <label
-            for="passowrd"
-            class="absolute left-4 top-4 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-500"
+            for="password"
+            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+            :class="{ 'top-1 text-xs text-secondary': firstName }"
           >Password</label>
+
           <!-- Email Icon -->
           <img
-            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-[18px] h-[18px] text-gray-400"
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
             src="../../assets/vendor/password.png"
-            alt="Passowrd icon"
+            alt="Email icon"
           />
         </div>
 
@@ -127,18 +137,21 @@
             type="confirmPassword"
             id="confirmPassword"
             v-model="confirmPassword"
-            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
             placeholder=" "
+            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
           />
+
           <label
-            for="confirmPassword"
-            class="absolute left-4 top-4 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-500"
+            for="password"
+            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+            :class="{ 'top-1 text-xs text-secondary': confirmPassword }"
           >Confirm Password</label>
+
           <!-- Email Icon -->
           <img
-            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-[14px] h-[10px] text-gray-400"
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
             src="../../assets/vendor/right.png"
-            alt="Confirm Password icon"
+            alt="Confirm Password"
           />
         </div>
 
