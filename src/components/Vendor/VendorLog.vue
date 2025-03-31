@@ -28,7 +28,7 @@
     <div class="grid justify-items-center py-5">
       <img src="../../assets/vendor/logo.png" alt />
       <div class="heding text-center mb-6">
-        <h1 class="text-black font-semibold text-3xl">Tell us About Yourself</h1>
+        <h1 class="text-black font-semibold text-3xl">Vendor Portal</h1>
         <span class="text-[#6C6C6C] text-sm">Enter details to proceed further</span>
       </div>
 
@@ -61,50 +61,50 @@
         <!-- First & Last Name -->
         <div class="flex gap-6">
           <div class="relative">
-          <input
-            type="firstName"
-            id="firstName"
-            v-model="firstName"
-            placeholder=" "
-            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
-          />
+            <input
+              type="firstName"
+              id="firstName"
+              v-model="firstName"
+              placeholder=" "
+              class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+            />
 
-          <label
-            for="firstName"
-            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
-            :class="{ 'top-1 text-xs text-secondary': firstName }"
-          >First Name</label>
+            <label
+              for="firstName"
+              class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+              :class="{ 'top-1 text-xs text-secondary': firstName }"
+            >First Name</label>
 
-          <!-- Email Icon -->
-          <img
-            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
-            src="../../assets/vendor/profile.png"
-            alt="firstName icon"
-          />
-        </div>
+            <!-- Email Icon -->
+            <img
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+              src="../../assets/vendor/profile.png"
+              alt="firstName icon"
+            />
+          </div>
 
-        <div class="relative w-1/2">
-          <input
-            type="lastName"
-            id="lastName"
-            v-model="lastName"
-            placeholder=" "
-            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
-          />
+          <div class="relative w-1/2">
+            <input
+              type="lastName"
+              id="lastName"
+              v-model="lastName"
+              placeholder=" "
+              class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+            />
 
-          <label
-            for="lastName"
-            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
-            :class="{ 'top-1 text-xs text-secondary': lastName }"
-          >Last Name</label>
+            <label
+              for="lastName"
+              class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+              :class="{ 'top-1 text-xs text-secondary': lastName }"
+            >Last Name</label>
 
-          <!-- Email Icon -->
-          <img
-            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
-            src="../../assets/vendor/profile.png"
-            alt="lastname icon"
-          />
-        </div>
+            <!-- Email Icon -->
+            <img
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+              src="../../assets/vendor/profile.png"
+              alt="lastname icon"
+            />
+          </div>
         </div>
 
         <!-- Password -->
@@ -149,7 +149,7 @@
 
           <!-- Email Icon -->
           <img
-            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-[14px] h-[10px]"
             src="../../assets/vendor/right.png"
             alt="Confirm Password"
           />

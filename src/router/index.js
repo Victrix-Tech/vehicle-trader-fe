@@ -57,6 +57,7 @@ const router = createRouter({
       name: 'CustomerSignIn',
       component: CustomerSignInView
     }
+
   ],
 })
 

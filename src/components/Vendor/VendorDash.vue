@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-t from-primary to-secondary flex">
+  <div class="min-h-screen bg-gradient-to-t from-primary to-secondary flex overflow-y-hidden">
     <DashboardSide />
 
     <!-- Main Content -->
@@ -65,17 +65,7 @@
         </div>
       </header>
 
-      <!-- Navigation Tabs -->
-      <div class="flex space-x-1 mb-4 px-6">
-        <button
-          class="bg-primary text-white px-4 py-2 mt-[-1] rounded-tl-md flex space-x-2 items-center"
-        >
-          <img src="../../assets/vendor/carlogo.png" alt />
-          <span>Vehicle Management</span>
-        </button>
-        <button class="bg-gray-300 text-black px-4 py-2 rounded">Profile Management</button>
-        <button class="bg-gray-300 text-black px-4 py-2 rounded">Message Center</button>
-      </div>
+      <DashboardSecNav />
 
       <!-- Vehicle Cards -->
       <div class="grid gap-4">
@@ -137,5 +127,6 @@
 </template>
 <script setup >
 import DashboardSide from "../../components/Vendor/DashboardSide.vue";
+import DashboardSecNav from "../../components/Vendor/DashboardSecNav.vue";
 </script>
   
