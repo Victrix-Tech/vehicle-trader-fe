@@ -65,9 +65,9 @@
         </div>
       </header>
 
-      <DashboardSecNav />
-      <VehicleGrid />
-
+      <DashboardSecNav :tab="activeTab" @tab-change="activeTab = $event" />
+      <VehicleGrid v-if="activeTab === 'vehicle'" />
+      <VendorProfile v-else-if="activeTab === 'profile'" />
       <!-- Vehicle Cards -->
       <div class="grid gap-4">
         <div
@@ -127,8 +127,13 @@
   </div>
 </template>
 <script setup >
+import { ref } from "vue";
+
 import DashboardSide from "../../components/Vendor/DashboardSide.vue";
 import DashboardSecNav from "../../components/Vendor/DashboardSecNav.vue";
 import VehicleGrid from "../../components/Vendor/VehicleGrid.vue";
+import VendorProfile from "../../components/Vendor/VendorProfile.vue";
+
+const activeTab = ref("vehicle");
 </script>
   

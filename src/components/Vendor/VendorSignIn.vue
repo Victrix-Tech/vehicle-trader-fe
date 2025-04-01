@@ -155,10 +155,24 @@ const handleLogin = async e => {
     const response = await vendorService.login(payload);
 
     if (response.data.isSuccess) {
-      // Optionally store token or user info
-      // localStorage.setItem('token', response.data.token);
+      console.log("response", response.data);
+      const { access_token, refresh_token, user } = response.data.jwt;
 
-      // Redirect after successful login
+      // Store tokens
+      localStorage.setItem("_access_token", access_token);
+      localStorage.setItem("_refresh_token", refresh_token);
+
+      // Store user details
+      const person = {
+        email: user.email,
+        firstname: user.firstname,
+        lastname: user.lastname,
+        userId: user.userId,
+        userType: user.userType
+      };
+
+      localStorage.setItem("_person", JSON.stringify(person));
+
       router.push("/vendordash"); // Change route as needed
     } else {
       errorMessage.value =
