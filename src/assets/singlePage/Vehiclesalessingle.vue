@@ -389,7 +389,7 @@
                     12,450,000 /=
                   </span>
                   <img
-                    src="../assets/singlePage/product-03.png"
+                    src="../../../../public/images/product-03.png"
                     alt="BMW I8"
                     class="object-contain w-full h-60"
                   />
@@ -483,7 +483,7 @@
                     12,450,000 /=
                   </span>
                   <img
-                    src="../assets/singlePage/product-04.png"
+                    src="../../../../public/images/product-04.png"
                     alt="BMW I8"
                     class="object-contain w-full h-60"
                   />

@@ -5,7 +5,6 @@ import VendorLogView from '@/views/Vendor/VendorLogView.vue'
 import VendorSignInView from '@/views/Vendor/VendorSignInView.vue'
 import AdminLogView from '@/views/Admin/AdminLogView.vue'
 import AdminSignInView from '@/views/Admin/AdminSignInView.vue'
-
 import VendorDashView from '@/views/Vendor/VendorDashView.vue'
 import CustomerLogView from '@/views/Customer/CustomerLogView.vue'
 import CustomerSignInView from '@/views/Customer/CustomerSignInView.vue'

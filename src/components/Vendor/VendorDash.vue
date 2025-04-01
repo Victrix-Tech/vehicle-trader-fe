@@ -5,7 +5,7 @@
     <!-- Main Content -->
     <div class="flex-1 rounded-l-[1.9rem] bg-white">
       <!-- Header main -->
-      <header class="pt-12 px-6 mb-6 pb-5 border-b border-black">
+      <header class="pt-12 px-6 pr-20 mb-6 pb-5 border-b border-black">
         <div class="header-section flex justify-between items-center">
           <div>
             <h1 class="text-2xl font-bold">
@@ -23,7 +23,7 @@
       </header>
 
       <!-- Header Second -->
-      <header class="flex justify-between items-center pl-6 pr-10 mb-6">
+      <header class="flex justify-between items-center pl-6 pr-20 mb-6">
         <!-- Breadcrumb -->
         <div>
           <h1 class="text-sm text-gray-500">
@@ -130,6 +130,5 @@
 import DashboardSide from "../../components/Vendor/DashboardSide.vue";
 import DashboardSecNav from "../../components/Vendor/DashboardSecNav.vue";
 import VehicleGrid from "../../components/Vendor/VehicleGrid.vue";
-
 </script>
   

@@ -33,7 +33,7 @@
       </div>
 
       <!-- form -->
-      <form class="w-full max-w-sm space-y-8">
+      <form class="w-full max-w-sm space-y-8" @submit="handleSubmit">
         <!-- Email -->
         <div class="relative">
           <input
@@ -110,6 +110,30 @@
         <!-- Password -->
         <div class="relative">
           <input
+            type="mobile"
+            id="mobile"
+            v-model="mobile"
+            placeholder=" "
+            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+          />
+
+          <label
+            for="mobile"
+            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+            :class="{ 'top-1 text-xs text-secondary': firstName }"
+          >Mobile</label>
+
+          <!-- Email Icon -->
+          <img
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+            src="../../assets/vendor/password.png"
+            alt="Mobile icon"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="relative">
+          <input
             type="password"
             id="password"
             v-model="password"
@@ -171,17 +195,68 @@
         >Continue</button>
       </form>
     </div>
+    <Popup v-if="showError" :message="errorMessage" @close="handlePopupClose" />
   </section>
 </template>
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+import vendorService from "@/services/apiService";
+import Popup from "@/components/Vendor/Popup.vue";
 
-const form = ref({
-  email: "",
-  firstName: "",
-  lastName: "",
-  password: "",
-  confirmPassword: "",
-  agree: false
-});
+const router = useRouter();
+
+const email = ref("");
+const firstName = ref("");
+const lastName = ref("");
+const password = ref("");
+const confirmPassword = ref("");
+const form = ref({ agree: false });
+const mobile = ref("");
+const loading = ref(false);
+const errorMessage = ref("");
+const showError = ref(false);
+
+const handleSubmit = async e => {
+  e.preventDefault();
+  // console.log("test");
+
+  if (password.value !== confirmPassword.value) {
+    errorMessage.value = "Passwords do not match";
+    showError.value = true;
+    return;
+  }
+
+  const payload = {
+    firstname: firstName.value,
+    lastname: lastName.value,
+    email: email.value,
+    imageUrl: "",
+    mobile: mobile.value,
+    password: password.value
+  };
+
+  try {
+    const response = await vendorService.signUp(payload);
+    console.log("test", response);
+    if (response.data.isSuccess) {
+      router.push("/vendorSignIn");
+    } else {
+      errorMessage.value =
+        response.data.errorMessage?.message || "Something went wrong";
+      showError.value = true;
+    }
+  } catch (error) {
+    errorMessage.value =
+      error.response?.data?.errorMessage?.message ||
+      error.message ||
+      "An error occurred";
+    showError.value = true;
+  }
+};
+
+const handlePopupClose = () => {
+  showError.value = false;
+};
 </script>
+
