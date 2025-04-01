@@ -3,6 +3,6 @@
     <AdminSignInView />
   </main>
 </template>
-  <script setup>
+<script setup>
 import AdminSignInView from "../../components/Admin/AdminSignin.vue";
 </script>

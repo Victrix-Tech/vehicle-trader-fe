@@ -1,24 +1,32 @@
 <template>
-  <!-- Navigation Tabs -->
-  <div class="Navigation-tabe border-black border-b">
-    <div class="flex space-x-1 px-6">
+  <div class="border-b border-black px-6">
+    <div class="flex space-x-1">
       <button
-        class="bg-primary text-white px-4 py-2 mt-[-1] rounded-tl-md flex space-x-2 items-center"
+        @click="$emit('tab-change', 'vehicle')"
+        :class="['px-4 py-2 rounded-tl-md flex items-center space-x-2', tab === 'vehicle' ? 'bg-primary text-white' : 'bg-secondary text-white']"
       >
-        <img src="../../assets/vendor/carlogo.png" alt />
+        <img src="@/assets/vendor/carlogo.png" alt />
         <span>Vehicle Management</span>
       </button>
-      <button class="bg-secondary text-white px-4 py-2 mt-[-1] flex space-x-2 items-center">
-        <img src="../../assets/vendor/profilelogo.png" alt />
+      <button
+        @click="$emit('tab-change', 'profile')"
+        :class="['px-4 py-2 flex items-center space-x-2', tab === 'profile' ? 'bg-primary text-white' : 'bg-secondary text-white']"
+      >
+        <img src="@/assets/vendor/profilelogo.png" alt />
         <span>Profile Management</span>
       </button>
       <button
-        class="bg-secondary text-white px-4 py-2 mt-[-1] rounded-tr-md flex space-x-2 items-center"
+        @click="$emit('tab-change', 'message')"
+        :class="['px-4 py-2 rounded-tr-md flex items-center space-x-2', tab === 'message' ? 'bg-primary text-white' : 'bg-secondary text-white']"
       >
-        <img src="../../assets/vendor/messagelogo.png" alt />
+        <img src="@/assets/vendor/messagelogo.png" alt />
         <span>Message Center</span>
       </button>
     </div>
   </div>
 </template>
-<script setup></script>
+
+<script setup>
+defineProps(["tab"]);
+defineEmits(["tab-change"]);
+</script>
