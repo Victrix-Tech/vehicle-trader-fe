@@ -1,5 +1,5 @@
 <template>
-  <div class="border-b border-black px-6">
+  <div class="border-b border-black px-6 lg:block hidden ">
     <div class="flex space-x-1">
       <button
         @click="$emit('tab-change', 'vehicle')"

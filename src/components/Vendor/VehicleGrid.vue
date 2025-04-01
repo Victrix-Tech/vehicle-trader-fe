@@ -1,6 +1,6 @@
 <template>
   <section class="pr-20 pl-5 h-[60vh] overflow-y-scroll space-y-4 mt-5">
-    <div class="flex justify-end items-center space-x-2 pr-6 sm:flex-row">
+    <div class="flex justify-end items-center space-x-2 pr-6 sm:flex-row ">
       <!-- Car Image 1 -->
       <img
         src="../../assets/vendor/group.png"
@@ -19,9 +19,7 @@
       />
     </div>
 
-    <div
-      class="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
-    >
+    <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
       <!-- Car Image -->
       <div class="flex-shrink-0 w-full md:w-1/4 bg-gray-50 flex items-center justify-center p-4">
         <img

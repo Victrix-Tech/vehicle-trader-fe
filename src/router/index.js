@@ -40,7 +40,8 @@ const routes = [
     path: '/vendordash',
     name: 'vendordash',
     component: VendorDashView,
-    meta: { requiresAuth: true, role: 'VENDOR' }
+    // meta: { requiresAuth: true, role: 'VENDOR' }
+    meta: { guestOnly: true }
   },
   {
     path: '/AdminLog',
