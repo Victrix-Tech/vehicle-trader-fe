@@ -96,30 +96,30 @@
     </div>
 
     <!-- third row in Header -->
-     <div class="flex text-[#FFFFFF] gap-[4.8rem] justify-end lg:px-20 px-5 h-[50px] justify items-center">
+     <div class="flex text-[#FFFFFF] gap-[4.8rem] justify-end lg:px-20 px-5 h-[50px] justify items-center lg:text-[15px] text-[10px] ">
       <div>
-        <a href="#" class="font-semibold text-[15px] py-0 mb-[10rem] ">Used Cars</a>
+        <a href="#" class="font-semibold py-0 mb-[10rem] ">Used Cars</a>
       </div>
       <div>
-        <a href="#" class="font-semibold text-[15px] py-0 mb-[10rem] ">New Cars</a>
+        <a href="#" class="font-semibold py-0 mb-[10rem] ">New Cars</a>
       </div>
       <div>
-        <a href="#" class="font-semibold text-[15px] py-0 mb-[10rem] ">Sell Your Car</a>
+        <a href="#" class="font-semibold py-0 mb-[10rem] ">Sell Your Car</a>
       </div>
       <div>
-        <a href="#" class="font-semibold text-[15px] py-0 mb-[10rem] "> Value Your Care</a>
+        <a href="#" class="font-semibold  py-0 mb-[10rem] "> Value Your Care</a>
       </div>
       <div>
-        <a href="#" class="font-semibold text-[15px] py-0 mb-[10rem] ">Car Reviews</a>
+        <a href="#" class="font-semibold  py-0 mb-[10rem] ">Car Reviews</a>
       </div>
       <div>
-        <a href="#" class="font-semibold text-[15px] py-0 mb-[10rem] ">Car Leasing</a>
+        <a href="#" class="font-semibold  py-0 mb-[10rem] ">Car Leasing</a>
       </div>
       <div>
-        <a href="#" class="font-semibold text-[15px] py-0 mb-[10rem] ">Electric Cars</a>
+        <a href="#" class="font-semibold  py-0 mb-[10rem] ">Electric Cars</a>
       </div>
       <div>
-        <a href="#" class="font-semibold text-[15px] py-0 mb-[10rem] ">Buy a Car Online</a>
+        <a href="#" class="font-semibold  py-0 mb-[10rem] ">Buy a Car Online</a>
       </div>
      </div>
     

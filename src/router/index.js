@@ -5,9 +5,11 @@ import VendorLogView from '@/views/Vendor/VendorLogView.vue'
 import VendorSignInView from '@/views/Vendor/VendorSignInView.vue'
 import AdminLogView from '@/views/Admin/AdminLogView.vue'
 import AdminSignInView from '@/views/Admin/AdminSignInView.vue'
+
 import VendorDashView from '@/views/Vendor/VendorDashView.vue'
 import CustomerLogView from '@/views/Customer/CustomerLogView.vue'
 import CustomerSignInView from '@/views/Customer/CustomerSignInView.vue'
+import VehicleSalesSingle from '@/views/VehicleSalesSingle.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -48,16 +50,10 @@ const router = createRouter({
       component: VendorDashView,
     },
     {
-      path: '/customerlog',
-      name: 'customerlog',
-      component: CustomerLogView,
-    },
-    {
-      path: '/CustomerSignIn',
-      name: 'CustomerSignIn',
-      component: CustomerSignInView
+      path: '/vehiclesale',
+      name: 'vehiclesale',
+      component: VehicleSalesSingle,
     }
-
   ],
 })
 
