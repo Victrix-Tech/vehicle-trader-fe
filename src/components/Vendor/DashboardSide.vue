@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="hidden lg:block">
     <!-- Sidebar -->
     <aside class="w-[15rem] text-white p-6 pl-[3rem] pt-16">
       <img src="../../assets/vendor/logdash.png" alt />
