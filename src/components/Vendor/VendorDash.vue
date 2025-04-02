@@ -5,25 +5,25 @@
     <!-- Main Content -->
     <div class="flex-1 lg:rounded-l-[1.9rem] bg-white">
       <!-- Header main -->
-      <header class="lg:pt-12 pt-5 lg:px-6 px-4 lg:pr-20 lg:mb-6 lg:pb-5 border-b border-black ">
-        <div class="header-section flex justify-between items-center space-x-2 py-4 lg:py-0">
-  <div>
-    <h1 class="lg:text-2xl font-bold text-md">
-      Vendor Dashboard
-      <span class="text-secondary ">Portal</span>
-    </h1>
-  </div>
-  <div class="flex items-center lg:space-x-4 lg:w-auto space-x-2">
-    <div class="flex items-center space-x-2">
-      <img src="../../assets/vendor/avatar.png" class="rounded-full w-6 lg:w-auto" alt="User" />
-      <span>Banuka Silva</span>
-    </div>
-  </div>
-</div>
+      <header class="lg:pt-12 pt-5 lg:px-6 px-4 lg:pr-20 lg:mb-6 lg:pb-5 border-b border-black">
+        <div class="header-section flex justify-between items-center space-x-2">
+          <div>
+            <h1 class="lg:text-2xl font-bold text-md">
+              Vendor Dashboard
+              <span class="text-secondary">Portal</span>
+            </h1>
+          </div>
+          <div class="flex items-center lg:space-x-4 space-2">
+            <div class="flex items-center space-x-2">
+              <img src="../../assets/vendor/avatar.png" class="rounded-full" alt="User" />
+              <span>{{fullName}}</span>
+            </div>
+          </div>
+        </div>
       </header>
 
       <!-- Header Second -->
-      <header class="lg:flex justify-between items-center lg:pl-6 lg:pr-20 mb-6 hidden ">
+      <header class="lg:flex justify-between items-center lg:pl-6 lg:pr-20 mb-6 hidden">
         <!-- Breadcrumb -->
         <div>
           <h1 class="text-sm text-gray-500 hidden lg:block">
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Search + Notification -->
-        <div class="lg:flex items-center space-x-4 mt-5 lg:mt-0 hidden ">
+        <div class="lg:flex items-center space-x-4 mt-5 lg:mt-0 hidden">
           <div class="flex items-center border rounded overflow-hidden shadow-sm">
             <input
               type="text"
@@ -127,12 +127,20 @@
   </div>
 </template>
 <script setup >
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 import DashboardSide from "../../components/Vendor/DashboardSide.vue";
 import DashboardSecNav from "../../components/Vendor/DashboardSecNav.vue";
 import VehicleGrid from "../../components/Vendor/VehicleGrid.vue";
 import VendorProfile from "../../components/Vendor/VendorProfile.vue";
+
+// Get user data from localStorage
+const storedUser = JSON.parse(localStorage.getItem("_person") || "{}");
+
+// Create full name
+const fullName = computed(() => {
+  return `${storedUser.firstname || ""} ${storedUser.lastname || ""}`.trim();
+});
 
 const activeTab = ref("vehicle");
 </script>

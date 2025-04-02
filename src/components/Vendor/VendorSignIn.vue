@@ -1,5 +1,5 @@
 <template>
-  <section class="px-4 py-8 h-screeen grid lg:grid-cols-2 gap-6 overflow-y-hidden">
+  <section class="px-4 py-8 h-screeen grid lg:grid-cols-2 gap-6 lg:overflow-y-hidden">
     <!-- left side -->
     <div
       class="relative rounded-lg col-span-1 bg-hero-vendor h-[94vh] bg-cover bg-center lg:flex flex-col justify-between gap-6 hidden"
@@ -19,7 +19,9 @@
           <span class="text-white text-[18px]">Do you already have an account?</span>
         </div>
         <div class="btn-sign">
-          <button class="px-6 py-1 border-white border text-white rounded-lg">Sign up</button>
+          <router-link to="/vendorlog">
+            <button class="px-6 py-1 border-white border text-white rounded-lg">Sign up</button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -38,6 +40,7 @@
           <input
             type="email"
             id="email"
+            required
             v-model="email"
             placeholder=" "
             class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -61,6 +64,7 @@
           <input
             type="password"
             id="password"
+            required
             v-model="password"
             placeholder=" "
             class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -104,8 +108,9 @@
         <!-- Sign In -->
         <button
           type="submit"
+          :disabled="loading"
           class="w-full text-[20px] bg-primary text-gold py-2 rounded font-semibold text-lg hover:bg-[#2c3a52] mt-10"
-        >Sign In</button>
+        >{{ loading ? "Signing up..." : "Sign In" }}</button>
         <div class="flex items-center my-4">
           <div class="border-t border-[#E7E7E7] h-[0.0625rem] flex-grow"></div>
           <span class="px-4 text-sm text-[#577C8E] font-semibold">or</span>
@@ -131,7 +136,7 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import vendorService from "@/services/apiService";
+import { vendorService } from "@/services/apiService";
 import Popup from "@/components/Vendor/Popup.vue";
 
 const router = useRouter();
@@ -142,6 +147,7 @@ const form = ref({ rememberMe: false });
 
 const showError = ref(false);
 const errorMessage = ref("");
+const loading = ref(false);
 
 const handleLogin = async e => {
   e.preventDefault();
@@ -150,6 +156,8 @@ const handleLogin = async e => {
     email: email.value,
     password: password.value
   };
+
+  loading.value = true;
 
   try {
     const response = await vendorService.login(payload);
@@ -185,6 +193,7 @@ const handleLogin = async e => {
       error.message ||
       "An error occurred";
     showError.value = true;
+    loading.value = false;
   }
 };
 

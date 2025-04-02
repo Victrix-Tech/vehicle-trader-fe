@@ -40,14 +40,8 @@ const routes = [
     path: '/vendordash',
     name: 'vendordash',
     component: VendorDashView,
-    // meta: { requiresAuth: true, role: 'VENDOR' }
-    meta: { guestOnly: true }
-  },
-  {
-    path: '/AdminLog',
-    name: 'AdminLog',
-    component: AdminLogView,
-    meta: { guestOnly: true }
+    meta: { requiresAuth: true, role: 'VENDOR' }
+
   },
   {
     path: '/AdminSignIn',
@@ -59,6 +53,16 @@ const routes = [
     path: '/vehiclesale',
     name: 'vehiclesale',
     component: VehicleSalesSingle,
+  },
+  {
+    path: '/customerlog',
+    name: 'customerlog',
+    component: CustomerLogView,
+  },
+  {
+    path: '/customersign',
+    name: 'customersign',
+    component: CustomerSignInView,
   }
 ];
 
@@ -81,7 +85,7 @@ router.beforeEach((to, from, next) => {
     if (userRole === 'VENDOR') {
       return next({ name: 'vendordash' });
     } else if (userRole === 'ADMIN') {
-      return next({ name: 'AdminSignIn' }); 
+      return next({ name: 'vendordash' }); 
     }
     return next({ name: '/' });
   }
