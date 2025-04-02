@@ -1,7 +1,10 @@
 <template>
-  <section class="pr-20 pl-5 h-[60vh] overflow-y-scroll space-y-4 mt-5">
-    <div class="flex justify-end items-center space-x-2 pr-6 sm:flex-row ">
+  <section class="lg:pr-20 w-full lg:w-auto lg:pl-5 lg:h-[60vh] h-[90vh] overflow-y-scroll space-y-4 mt-5 lg:pb-0 pb-10">
+    <div class="flex justify-end items-center space-x-2 lg:pr-6 sm:flex-row ">
       <!-- Car Image 1 -->
+  <section class="w-full max-w-[90%] mx-auto lg:max-w-none lg:pr-20 lg:pl-5 lg:h-[60vh] overflow-y-scroll space-y-4 mt-5">
+    <div class="flex justify-end items-center space-x-2 lg:pr-6 pr-2 sm:flex-row ">
+      
       <img
         src="../../assets/vendor/group.png"
         alt="Group Image 1"
@@ -11,7 +14,7 @@
       <!-- Vertical Line -->
       <div class="w-[0.0625rem] h-[1.375rem] bg-[#D1D3D6]"></div>
 
-      <!-- Car Image 2 -->
+      
       <img
         src="../../assets/vendor/group1.png"
         alt="Group Image 2"
@@ -635,6 +638,8 @@
         </span>
       </div>
     </div>
+  </section>
+  </div>
   </section>
 </template>
   
