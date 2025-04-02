@@ -6,20 +6,20 @@
     <div class="flex-1 lg:rounded-l-[1.9rem] bg-white">
       <!-- Header main -->
       <header class="lg:pt-12 pt-5 lg:px-6 px-4 lg:pr-20 lg:mb-6 lg:pb-5 border-b border-black ">
-        <div class="header-section flex justify-between items-center space-x-2">
-          <div>
-            <h1 class="lg:text-2xl font-bold text-md">
-              Vendor Dashboard
-              <span class="text-secondary ">Portal</span>
-            </h1>
-          </div>
-          <div class="flex items-center lg:space-x-4 space-2">
-            <div class="flex items-center space-x-2">
-              <img src="../../assets/vendor/avatar.png" class="rounded-full" alt="User" />
-              <span>Banuka Silva</span>
-            </div>
-          </div>
-        </div>
+        <div class="header-section flex justify-between items-center space-x-2 py-4 lg:py-0">
+  <div>
+    <h1 class="lg:text-2xl font-bold text-md">
+      Vendor Dashboard
+      <span class="text-secondary ">Portal</span>
+    </h1>
+  </div>
+  <div class="flex items-center lg:space-x-4 lg:w-auto space-x-2">
+    <div class="flex items-center space-x-2">
+      <img src="../../assets/vendor/avatar.png" class="rounded-full w-6 lg:w-auto" alt="User" />
+      <span>Banuka Silva</span>
+    </div>
+  </div>
+</div>
       </header>
 
       <!-- Header Second -->
