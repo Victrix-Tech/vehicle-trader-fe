@@ -1,6 +1,6 @@
 <template>
     <section
-        class="md:py-12 pt-12 pb-0 bg-gray-100 bg-[url('../../../../public/images/slider-bg.png')] bg-no-repeat bg-cover bg-right -mt-20">
+        class="md:py-12 h-screen pt-12 pb-0 bg-gray-100 bg-[url('../../../../public/images/slider-bg.png')] bg-no-repeat bg-cover bg-right -mt-20">
         <div class="container px-4 mx-auto">
             <div class="flex flex-col items-center lg:mt-5 md:mt-11 mt-10 lg:h-[550px] md:flex-row">
                 

@@ -1,12 +1,12 @@
 <template>
-    <main>
+    <main class=" " >
         <section class="bg-[linear-gradient(to_top,#262626_40%,#4A4A4A_90%)]">
             <div class="container px-4 mx-auto">
                 <div class="flex flex-row lg:py-12 md:py-8 py-5 border-b border-[#CFB680]">
                     <div class="grid grid-cols-1 gap-5 lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 ">
-                        <div class="md:col-span-2">
-                            <img src="../../public/images/logo-white.png" alt="Logo" class="w-40">
-                            <p class="text-[#FFFFFF] xl:text-[14px] md:text-[13px] text-[12px] mt-4 font-normal">Lorem
+                        <div class="md:col-span-2 justify-items-center lg:justify-items-start">
+                            <img  src="../../public/images/logo-white.png" alt="Logo" class="w-40 ">
+                            <p class="text-[#FFFFFF] xl:text-[14px] md:text-[13px] text-[12px] mt-4 font-normal text-center lg:text-left">Lorem
                                 Ipsum is simply dummy text of
                                 the
                                 printing and
@@ -18,40 +18,52 @@
                                 Read More
                             </button>
                         </div>
-                        <div>
+                        <div class="justify-items-center lg:justify-items-start">
                             <h5 class="text-[#CFB680] text-[16px] font-bold mb-5">Quick Links</h5>
-                            <ul class="space-y-2 xl:text-[13px] md:text-[12px] text-[12px] font-medium ">
-                                <li>
-                                    <a href="#" class="text-white hover:text-[#CFB680]">
-                                        <i class="fa fa-angle-right text-[#CFB680] me-2"></i> Home
+                            <ul class="space-y-2 xl:text-[13px] md:text-[18px] text-[18px] font-medium justify-items-center lg:justify-items-start ">
+                                <li class="">
+                                    <a href="#" class="text-white hover:text-[#CFB680] flex">
+                                        <div class="home hidden lg:block">
+                                           <i class="fa fa-angle-right text-[#CFB680] me-2 "></i>
+                                        </div>
+                                        Home                                       
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-white hover:text-[#CFB680]">
-                                        <i class="fa fa-angle-right text-[#CFB680] me-2"></i> About
-                                        Us
+                                    <a href="#" class="text-white hover:text-[#CFB680] flex">
+                                        <div class="home hidden lg:block">
+                                           <i class="fa fa-angle-right text-[#CFB680] me-2 "></i>
+                                        </div> 
+                                        About Us
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-white hover:text-[#CFB680]">
-                                        <i class="fa fa-angle-right text-[#CFB680] me-2"></i> News
+                                    <a href="#" class="text-white hover:text-[#CFB680] flex">
+                                        <div class="home hidden lg:block">
+                                           <i class="fa fa-angle-right text-[#CFB680] me-2 "></i>
+                                        </div> 
+                                        News
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-white hover:text-[#CFB680]">
-                                        <i class="fa fa-angle-right text-[#CFB680] me-2"></i>
+                                    <a href="#" class="text-white hover:text-[#CFB680] flex">
+                                        <div class="home hidden lg:block">
+                                           <i class="fa fa-angle-right text-[#CFB680] me-2 "></i>
+                                        </div>
                                         Vehicles
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-white hover:text-[#CFB680]">
-                                        <i class="fa fa-angle-right text-[#CFB680] me-2"></i>
+                                    <a href="#" class="text-white hover:text-[#CFB680] flex">
+                                        <div class="home hidden lg:block">
+                                           <i class="fa fa-angle-right text-[#CFB680] me-2 "></i>
+                                        </div>
                                         Contact Us
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="hidden lg:block">
                             <h5 class="text-[#CFB680] text-[16px] font-bold mb-5">Our Services</h5>
                             <ul class="space-y-2 xl:text-[13px] md:text-[12px] text-[12px] font-medium ">
                                 <li>
@@ -86,7 +98,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="hidden lg:block">
                             <h5 class="text-[#CFB680] text-[16px] font-bold mb-5">Legal</h5>
                             <ul class="space-y-2 xl:text-[13px] md:text-[12px] text-[12px] font-medium ">
                                 <li>
@@ -108,7 +120,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="hidden lg:block">
                             <h5 class="text-[#CFB680] text-[16px] font-bold mb-5">Contact us</h5>
                             <ul class="space-y-2 xl:text-[13px] md:text-[12px] text-[12px] font-medium ">
                                 <li>

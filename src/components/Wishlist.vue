@@ -2,15 +2,15 @@
   <div>
     <img class="w-full" src="../assets/wishlist/wishlistBg.png">
   </div>
-  <div class="flex lg:px-20 px-5 mt-5 mb-3 justify-between grid lg:grid-cols-2 grid-cols-1 ">
-    <div class="flex font-bold lg:text-[40px] text-[30px] gap-5">
+  <div class="flex lg:px-20 px-5 mt-5 mb-3 justify-between grid lg:grid-cols-2 grid-cols-1  ">
+    <div class="flex font-bold lg:text-[40px] text-[25px] lg:gap-5 gap-3 lg:justify-items-start justify-items-center">
       <h1>3</h1>
       <h1>Vehicles</h1>
       <h1 class="text-[#577C8E]">Saved</h1>
     </div>
-    <div>
+    <div class=" lg:justify-items-end justify-items-center ">
       <div class="mt-3 mb-3">
-        <div class="flex gap-3 text-[#2F4157] bg-[#FFFF] hover:bg-[#577C8E] focus:outline-none font-medium rounded-md text-sm border-[#D3CCCC] border p-3 pl-4 pr-5">
+        <div class="flex gap-3 text-[#2F4157] bg-[#FFFF] hover:bg-[#577C8E] focus:outline-none font-medium rounded-md text-sm border-[#D3CCCC] border p-3 pl-4 pr-5 w-[180px] justify-center">
           <img class="w-[20px] h-[20px] " src="../assets/wishlist/deleteBtn.png">
           <a href="#" class="font-bold text-[20px]">Delete All</a>  
         </div>
@@ -237,7 +237,7 @@
 
   </div>
   <div class="lg:px-40 px-5 md:gap-20 gap-5 place-content-center pt-10 pb-10 md:justify-between">
-    <div class="flex border-t-2 border-[#C7C7C7] gap-20 place-content-center mb-3">
+    <div class="flex border-t-2 border-[#C7C7C7] gap-10 lg:gap-20 place-content-center mb-3">
       <div class="border-[1px] rounded-md border-[#D3CCCC] text-[#A6A6A6] font-semibold p-2 mt-5" >Previous</div>
       <div class="border-[1px] rounded-md border-[#2F4157] text-#2F4157] font-semibold p-2 mt-5">1</div>
       <div class="border-[1px] rounded-md border-[#D3CCCC] text-[#000000] font-semibold p-2 mt-5">Next</div>

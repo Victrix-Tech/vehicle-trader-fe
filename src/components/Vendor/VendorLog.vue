@@ -19,7 +19,9 @@
           <span class="text-white text-[18px]">Do you already have an account?</span>
         </div>
         <div class="btn-sign">
-          <button class="px-6 py-1 border-white border text-white rounded-lg">Sign up</button>
+          <router-link to="/vendorSignIn">
+            <button class="px-6 py-1 border-white border text-white rounded-lg">Sign up</button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -33,12 +35,13 @@
       </div>
 
       <!-- form -->
-      <form class="w-full max-w-sm space-y-8">
+      <form class="w-full max-w-sm space-y-8" @submit="handleSubmit">
         <!-- Email -->
         <div class="relative">
           <input
             type="email"
             id="email"
+            required
             v-model="email"
             placeholder=" "
             class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -64,6 +67,7 @@
             <input
               type="firstName"
               id="firstName"
+              required
               v-model="firstName"
               placeholder=" "
               class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -87,6 +91,7 @@
             <input
               type="lastName"
               id="lastName"
+              required
               v-model="lastName"
               placeholder=" "
               class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -110,8 +115,34 @@
         <!-- Password -->
         <div class="relative">
           <input
+            type="mobile"
+            id="mobile"
+            required
+            v-model="mobile"
+            placeholder=" "
+            class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
+          />
+
+          <label
+            for="mobile"
+            class="absolute left-4 text-sm text-gray-400 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-secondary pointer-events-none"
+            :class="{ 'top-1 text-xs text-secondary': firstName }"
+          >Mobile</label>
+
+          <!-- Email Icon -->
+          <img
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+            src="../../assets/vendor/password.png"
+            alt="Mobile icon"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="relative">
+          <input
             type="password"
             id="password"
+            required
             v-model="password"
             placeholder=" "
             class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -136,6 +167,7 @@
           <input
             type="confirmPassword"
             id="confirmPassword"
+            required
             v-model="confirmPassword"
             placeholder=" "
             class="peer w-full border border-gray-300 rounded px-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -167,21 +199,75 @@
         <!-- Submit Button -->
         <button
           type="submit"
+          :disabled="loading"
           class="w-full text-[20px] bg-primary text-gold py-2 rounded font-semibold text-lg hover:bg-[#2c3a52] mt-10"
-        >Continue</button>
+        >{{ loading ? "Signing up..." : "Continue" }}</button>
       </form>
     </div>
+    <Popup v-if="showError" :message="errorMessage" @close="handlePopupClose" />
   </section>
 </template>
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { vendorService } from "@/services/apiService";
+import Popup from "@/components/Vendor/Popup.vue";
 
-const form = ref({
-  email: "",
-  firstName: "",
-  lastName: "",
-  password: "",
-  confirmPassword: "",
-  agree: false
-});
+const router = useRouter();
+
+const email = ref("");
+const firstName = ref("");
+const lastName = ref("");
+const password = ref("");
+const confirmPassword = ref("");
+const form = ref({ agree: false });
+const mobile = ref("");
+const loading = ref(false);
+const errorMessage = ref("");
+const showError = ref(false);
+
+const handleSubmit = async e => {
+  e.preventDefault();
+  // console.log("test");
+
+  if (password.value !== confirmPassword.value) {
+    errorMessage.value = "Passwords do not match";
+    showError.value = true;
+    return;
+  }
+
+  const payload = {
+    firstname: firstName.value,
+    lastname: lastName.value,
+    email: email.value,
+    imageUrl: "",
+    mobile: mobile.value,
+    password: password.value
+  };
+  loading.value = true;
+
+  try {
+    const response = await vendorService.signUp(payload);
+
+    if (response.data.isSuccess) {
+      router.push("/vendorSignIn");
+    } else {
+      errorMessage.value =
+        response.data.errorMessage?.message || "Something went wrong";
+      showError.value = true;
+    }
+  } catch (error) {
+    errorMessage.value =
+      error.response?.data?.errorMessage?.message ||
+      error.message ||
+      "An error occurred";
+    showError.value = true;
+    loading.value = false;
+  }
+};
+
+const handlePopupClose = () => {
+  showError.value = false;
+};
 </script>
+

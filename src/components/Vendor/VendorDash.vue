@@ -3,42 +3,42 @@
     <DashboardSide />
 
     <!-- Main Content -->
-    <div class="flex-1 rounded-l-[1.9rem] bg-white">
+    <div class="flex-1 lg:rounded-l-[1.9rem] bg-white">
       <!-- Header main -->
-      <header class="pt-12 px-6 mb-6 pb-5 border-b border-black">
-        <div class="header-section flex justify-between items-center">
+      <header class="lg:pt-12 pt-5 lg:px-6 px-4 lg:pr-20 lg:mb-6 lg:pb-5 border-b border-black">
+        <div class="header-section flex justify-between items-center space-x-2">
           <div>
-            <h1 class="text-2xl font-bold">
+            <h1 class="lg:text-2xl font-bold text-md">
               Vendor Dashboard
               <span class="text-secondary">Portal</span>
             </h1>
           </div>
-          <div class="flex items-center space-x-4">
+          <div class="flex items-center lg:space-x-4 space-2">
             <div class="flex items-center space-x-2">
               <img src="../../assets/vendor/avatar.png" class="rounded-full" alt="User" />
-              <span>Banuka Silva</span>
+              <span>{{fullName}}</span>
             </div>
           </div>
         </div>
       </header>
 
       <!-- Header Second -->
-      <header class="flex justify-between items-center pl-6 pr-10 mb-6">
+      <header class="lg:flex justify-between items-center lg:pl-6 lg:pr-20 mb-6 hidden">
         <!-- Breadcrumb -->
         <div>
-          <h1 class="text-sm text-gray-500">
+          <h1 class="text-sm text-gray-500 hidden lg:block">
             Home /
             <span class="text-[#C8A74E] font-medium">Vendor Dashboard Portal</span>
           </h1>
         </div>
 
         <!-- Search + Notification -->
-        <div class="flex items-center space-x-4">
+        <div class="lg:flex items-center space-x-4 mt-5 lg:mt-0 hidden">
           <div class="flex items-center border rounded overflow-hidden shadow-sm">
             <input
               type="text"
               placeholder="Search"
-              class="w-[25rem] px-2 py-2 text-sm text-gray-700 focus:outline-none"
+              class="lg:w-[25rem] px-2 py-2 text-sm text-gray-700 focus:outline-none"
             />
             <button class="bg-[#C8A74E] px-3 py-3 flex items-center justify-center">
               <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -65,9 +65,9 @@
         </div>
       </header>
 
-      <DashboardSecNav />
-      <VehicleGrid />
-
+      <DashboardSecNav :tab="activeTab" @tab-change="activeTab = $event" />
+      <VehicleGrid v-if="activeTab === 'vehicle'" />
+      <VendorProfile v-else-if="activeTab === 'profile'" />
       <!-- Vehicle Cards -->
       <div class="grid gap-4">
         <div
@@ -127,9 +127,21 @@
   </div>
 </template>
 <script setup >
+import { ref, computed } from "vue";
+
 import DashboardSide from "../../components/Vendor/DashboardSide.vue";
 import DashboardSecNav from "../../components/Vendor/DashboardSecNav.vue";
 import VehicleGrid from "../../components/Vendor/VehicleGrid.vue";
+import VendorProfile from "../../components/Vendor/VendorProfile.vue";
 
+// Get user data from localStorage
+const storedUser = JSON.parse(localStorage.getItem("_person") || "{}");
+
+// Create full name
+const fullName = computed(() => {
+  return `${storedUser.firstname || ""} ${storedUser.lastname || ""}`.trim();
+});
+
+const activeTab = ref("vehicle");
 </script>
   
