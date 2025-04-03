@@ -203,7 +203,9 @@
         >{{ loading ? "Signing up..." : "Continue" }}</button>
       </form>
     </div>
+
     <Popup v-if="showError" :message="errorMessage" @close="handlePopupClose" />
+
   </section>
 </template>
 <script setup>

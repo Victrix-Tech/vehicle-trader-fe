@@ -12,6 +12,7 @@ import AdminSignInView from '@/views/Admin/AdminSignInView.vue';
 import CustomerLogView from '@/views/Customer/CustomerLogView.vue';
 import CustomerSignInView from '@/views/Customer/CustomerSignInView.vue';
 import VehicleSalesSingle from '@/views/VehicleSalesSingle.vue';
+import AdminDash from '@/views/Admin/AdminDashView.vue';
 
 const routes = [
   {
@@ -63,6 +64,11 @@ const routes = [
     path: '/customersign',
     name: 'customersign',
     component: CustomerSignInView,
+  },
+  {
+    path: '/AdminDash',
+    name: 'AdminDash',
+    component: AdminDash,
   }
 ];
 
