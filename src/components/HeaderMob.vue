@@ -60,7 +60,17 @@
         'bg-transparent': !isScrolled
       }"
     >
-      <div class="flex justify-end items-center p-[1rem]">
+      <div class="flex justify-between items-center p-[1rem]">
+        <div 
+          class="hamburger-icon cursor-pointer"
+          @click="openMenu"
+          :class="{
+            'opacity-100 pointer-events-auto': isScrolled,
+            'opacity-0 pointer-events-none': !isScrolled
+          }"
+        >
+          <img class="h-[auto] w-[150px]" src="../assets/wishlist/logoWishlist.png">
+        </div>
         <!-- Only show hamburger icon in sticky header after scrolling -->
         <div 
           class="hamburger-icon cursor-pointer"
