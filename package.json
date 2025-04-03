@@ -1,6 +1,6 @@
 {
   "name": "vehicle-trader-fe",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,6 +12,8 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@motionone/vue": "^10.16.4",
+    "aos": "^2.3.4",
     "axios": "^1.8.4",
     "font-awesome": "^4.7.0",
     "primeicons": "^7.0.0",

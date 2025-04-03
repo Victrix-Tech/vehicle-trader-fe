@@ -41,7 +41,7 @@ const routes = [
     path: '/vendordash',
     name: 'vendordash',
     component: VendorDashView,
-    meta: { requiresAuth: true, role: 'VENDOR' }
+    meta: { guestOnly: true }
 
   },
   {

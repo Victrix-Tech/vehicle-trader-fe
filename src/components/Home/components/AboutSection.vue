@@ -1,6 +1,6 @@
 <template>
     <!-- about us section -->
-    <section class="px-4 py-12 bg-[#F5F5F5] md:px-12">
+    <section class="px-4 py-12 bg-[#F5F5F5] md:px-12 lg:mt-0 mt-[12rem]">
         <div class="container mx-auto">
             <div class="grid items-center grid-cols-1 gap-8 mx-auto md:grid-cols-5">
                 <div class="flex flex-col items-start space-y-4 md:col-span-2">
