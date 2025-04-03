@@ -7,7 +7,7 @@ import WishlistView from '@/views/WishlistView.vue';
 import VendorLogView from '@/views/Vendor/VendorLogView.vue';
 import VendorSignInView from '@/views/Vendor/VendorSignInView.vue';
 import VendorDashView from '@/views/Vendor/VendorDashView.vue';
-import AdminLogView from '@/views/Admin/AdminLogView.vue';
+//import AdminLogView from '@/views/Admin/AdminLogView.vue';
 import AdminSignInView from '@/views/Admin/AdminSignInView.vue';
 import CustomerLogView from '@/views/Customer/CustomerLogView.vue';
 import CustomerSignInView from '@/views/Customer/CustomerSignInView.vue';
@@ -73,11 +73,11 @@ const routes = [
     name: 'AdminDash',
     component: AdminDash,
   },
-  {
-    path: '/adminlogin',
-    name: 'AdminLogin',
-    component: AdminLogin,
-  },
+  // {
+  //   path: '/adminlogin',
+  //   name: 'AdminLogin',
+  //   component: AdminLogin,
+  // },
   {
     path: '/customerwishlist',
     name: 'CustomerWishlist',
