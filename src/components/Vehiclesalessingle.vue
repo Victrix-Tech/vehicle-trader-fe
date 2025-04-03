@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img class="w-full" src="../assets/wishlist/wishlistBg.png" alt="Wishlist Background" />
+    <div>
+        <img class="w-full" src="../assets/wishlist/wishlistBg.png" alt="Wishlist Background" />
 
     <div class="bg-gray-100 p-6">
       <div class="mx-auto p-[2.5rem] max-w-[90rem]">
@@ -684,8 +684,10 @@
       <!-- /////////////////// -->
     </div>
 
-    <div></div>
-  </div>
+        <div>
+            
+        </div>
+    </div>
 </template>
 
 <script>
@@ -694,48 +696,49 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
+
 export default {
-  data() {
-    return {
-      activeTab: "summary",
-      tabs: [
-        { label: "Vehicle Summary", value: "summary" },
-        { label: "Additional Information", value: "additional" },
-        { label: "Reviews", value: "reviews" }
-      ],
-      vehicleSummary: [
-        "Land Rover Range Rover Sport HSE Autobiography",
-        "Year of Manufacture 2015",
-        "3rd Owner",
-        "CAK - XXXX (Special Number Series)",
-        "Mileage 73,000 kms Only",
-        "Complete Maintenance Records Available",
-        "Metallic Gray Color Exterior with Ebony Black Leather Interior",
-        "Head Up Display",
-        "Panoramic Full Glass Roof with Open Sunroof",
-        "Original Rear Entertainment",
-        "Leather Electric Seats",
-        "Dual Electric Seats with Memory",
-        "Cool Box",
-        "Dual Malfunction",
-        "Cruise Control",
-        "Soft Close Doors",
-        "Off Road Package",
-        "Dual Exhaust System",
-        "Factory Fitted Side Step",
-        "Original Alloy Wheels",
-        "Power Tailgate",
-        "Immaculate Condition",
-        "Many More Options Available on the Jeep",
-        "Height Control",
-        "Sliding Sunroof",
-        "Meridian Surrounding Sound System"
-      ]
-    };
-  },
-  components: { Swiper, SwiperSlide },
-  setup() {
-    return { Navigation, Pagination };
-  }
+    data() {
+        return {
+            activeTab: "summary",
+            tabs: [
+                { label: "Vehicle Summary", value: "summary" },
+                { label: "Additional Information", value: "additional" },
+                { label: "Reviews", value: "reviews" }
+            ],
+            vehicleSummary: [
+                "Land Rover Range Rover Sport HSE Autobiography",
+                "Year of Manufacture 2015",
+                "3rd Owner",
+                "CAK - XXXX (Special Number Series)",
+                "Mileage 73,000 kms Only",
+                "Complete Maintenance Records Available",
+                "Metallic Gray Color Exterior with Ebony Black Leather Interior",
+                "Head Up Display",
+                "Panoramic Full Glass Roof with Open Sunroof",
+                "Original Rear Entertainment",
+                "Leather Electric Seats",
+                "Dual Electric Seats with Memory",
+                "Cool Box",
+                "Dual Malfunction",
+                "Cruise Control",
+                "Soft Close Doors",
+                "Off Road Package",
+                "Dual Exhaust System",
+                "Factory Fitted Side Step",
+                "Original Alloy Wheels",
+                "Power Tailgate",
+                "Immaculate Condition",
+                "Many More Options Available on the Jeep",
+                "Height Control",
+                "Sliding Sunroof",
+                "Meridian Surrounding Sound System"
+            ]
+        };
+    },
+    components: { Swiper, SwiperSlide },
+    setup() {
+        return { Navigation, Pagination };
+    }
 };
 </script>

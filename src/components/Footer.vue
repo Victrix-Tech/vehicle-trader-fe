@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class=" " >
         <section class="bg-[linear-gradient(to_top,#262626_40%,#4A4A4A_90%)]">
             <div class="container px-4 mx-auto">
                 <div class="flex flex-row lg:py-12 md:py-8 py-5 border-b border-[#CFB680]">
