@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#2F4157]">
+  <div class="bg-[#2F4157] hidden lg:block  ">
     <!-- First row in Header -->
     <div class="h-[50px] grid justify items-center border-b-2 border-[#FFFFFF]">
       <div class="justify flex justify-between font-'Plus Jakarta Sans' text-[#FFFFFF]  lg:px-20 px-5">
