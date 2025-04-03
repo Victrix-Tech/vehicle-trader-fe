@@ -13,20 +13,20 @@
           </li>
           <li>
             <a href="#" class="flex items-center space-x-4">
-              <i class="pi pi-home text-lg"></i>
-              <span class="text-lg">Home</span>
+              <i class="pi pi-car text-lg"></i>
+              <span class="text-lg">Vehicle</span>
             </a>
+          </li>
+          <li>
+            <router-link to="/adminlogin" class="flex items-center space-x-4">
+              <i class="pi pi-user text-lg"></i>
+              <span class="text-lg ml-2">Admin Login</span>
+            </router-link>
           </li>
           <li>
             <a href="#" class="flex items-center space-x-4">
               <i class="pi pi-history text-lg"></i>
-              <span class="text-lg ml-2">History</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center space-x-4">
-              <i class="pi pi-cog text-lg"></i>
-              <span class="text-lg">Setting</span>
+              <span class="text-lg">History</span>
             </a>
           </li>
         </ul>

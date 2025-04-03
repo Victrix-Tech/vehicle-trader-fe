@@ -13,6 +13,9 @@ import CustomerLogView from '@/views/Customer/CustomerLogView.vue';
 import CustomerSignInView from '@/views/Customer/CustomerSignInView.vue';
 import VehicleSalesSingle from '@/views/VehicleSalesSingle.vue';
 import AdminDash from '@/views/Admin/AdminDashView.vue';
+import AdminLogin from '@/views/Admin/AdminLoginView.vue';
+import CustomerWishlist from '@/views/Customer/WishlistView.vue';
+import VehicleAdd from '@/views/Vendor/VehicleAddView.vue';
 
 const routes = [
   {
@@ -69,7 +72,23 @@ const routes = [
     path: '/AdminDash',
     name: 'AdminDash',
     component: AdminDash,
+  },
+  {
+    path: '/adminlogin',
+    name: 'AdminLogin',
+    component: AdminLogin,
+  },
+  {
+    path: '/customerwishlist',
+    name: 'CustomerWishlist',
+    component: CustomerWishlist,
+  },
+  {
+    path: '/vehicleadd',
+    name: 'VehicleAdd',
+    component: VehicleAdd,
   }
+  
 ];
 
 const router = createRouter({
