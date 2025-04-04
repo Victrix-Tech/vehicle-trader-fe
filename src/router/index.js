@@ -16,6 +16,7 @@ import AdminDash from '@/views/Admin/AdminDashView.vue';
 import AdminLogin from '@/views/Admin/AdminLoginView.vue';
 import CustomerWishlist from '@/views/Customer/WishlistView.vue';
 import VehicleAdd from '@/views/Vendor/VehicleAddView.vue';
+import VehicleApprove from '@/views/Admin/VehicleApproveView.vue';
 
 const routes = [
   {
@@ -87,6 +88,11 @@ const routes = [
     path: '/vehicleadd',
     name: 'VehicleAdd',
     component: VehicleAdd,
+  },
+  {
+    path: '/vehicleapprove',
+    name: 'VehicleApprove',
+    component: VehicleApprove,
   }
   
 ];
